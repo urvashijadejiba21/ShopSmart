@@ -140,6 +140,9 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
             <p>
                 View and manage customer orders.
             </p>
+            <a href="orders.php" class="button">
+                  Manage Orders
+            </a>
 
         </div>
 
@@ -150,6 +153,10 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
             <p>
                 Review important administrative changes made in ShopSmart.
             </p>
+
+             <a href="audit_logs.php" class="button">
+              View Audit Log
+            </a>
 
         </div>
 

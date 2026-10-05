@@ -56,12 +56,46 @@ footer {
 
         <h1 class="logo">ShopSmart</h1>
 
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="customer/catalogue.php">Shop</a>
-            <a href="login.php">Login</a>
-        </nav>
+       <nav>
 
+    <a href="index.php">Home</a>
+
+    <a href="customer/catalogue.php">Shop</a>
+
+    <?php if (isset($_SESSION['user_id'])): ?>
+
+        <?php if (($_SESSION['role'] ?? '') === 'customer'): ?>
+
+            <a href="customer/dashboard.php">
+                Dashboard
+            </a>
+
+        <?php elseif (($_SESSION['role'] ?? '') === 'admin'): ?>
+
+            <a href="admin/dashboard.php">
+                Admin Dashboard
+            </a>
+
+        
+            <?php endif; ?>
+
+        <a href="logout.php">
+            Logout
+        </a>
+
+    <?php else: ?>
+
+        <a href="login.php">
+            Login
+        </a>
+
+        <a href="register.php">
+            Register
+        </a>
+
+    <?php endif; ?>
+
+</nav>
     </div>
 </header>
 
@@ -97,7 +131,9 @@ footer {
 
         <div class="feature-card">
             <h3>Easy Ordering</h3>
-            <p>Add products to your cart and manage your orders.</p>
+            <p>
+    Place orders for available products and manage your shopping activity.
+</p>
         </div>
 
         <div class="feature-card">

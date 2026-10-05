@@ -302,6 +302,20 @@ function catalogueUrl($page, $search, $category)
                 width: 100%;
             }
         }
+        .order-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.order-button:hover {
+    opacity: 0.85;
+}
     </style>
 </head>
 
@@ -444,18 +458,37 @@ function catalogueUrl($page, $search, $category)
 
                         <p class="stock">
 
-                            <?php if ($product['stock_qty'] > 0): ?>
+                           <?php if ($product['stock_qty'] > 0): ?>
 
                                 <?= (int) $product['stock_qty'] ?>
-                                in stock
+                                 in stock
 
-                            <?php else: ?>
+                           <?php else: ?>
 
-                                Out of stock
+                                 Out of stock
 
-                            <?php endif; ?>
+                         <?php endif; ?>
 
                         </p>
+
+
+                         <?php if (
+                         isset($_SESSION['user_id']) &&
+                         ($_SESSION['role'] ?? '') === 'customer' &&
+                          $product['stock_qty'] > 0
+): ?>
+
+                         <a
+                            href="order.php?id=<?= (int) $product['product_id'] ?>"
+                            class="order-button"
+    >
+                              Order Now
+    </a>
+
+<?php endif; ?>
+
+
+</div>
 
                     </div>
 
