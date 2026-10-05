@@ -9,8 +9,45 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopSmart</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+   <style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    padding: 20px;
+    background: white;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #e9eef5;
+}
+
+.features {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+}
+
+.feature-card {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+</style>
+ </head>
 
 <body>
 
