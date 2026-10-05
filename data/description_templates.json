@@ -1,0 +1,21 @@
+{
+    "Electronics": [
+        "Discover the convenience of {product}, designed for reliable everyday use. Featuring {keywords}, it combines practical functionality with a modern design.",
+        "Upgrade your everyday setup with {product}. With {keywords}, this product offers a simple and dependable solution for modern users."
+    ],
+    "Clothing": [
+        "Refresh your wardrobe with {product}, designed for comfort and everyday style. Featuring {keywords}, it is a practical choice for daily wear.",
+        "{product} combines everyday comfort with a versatile design. With {keywords}, it is easy to incorporate into your regular wardrobe."
+    ],
+    "Home": [
+        "Make your space more practical with {product}. Featuring {keywords}, it is designed to provide useful functionality for everyday living.",
+        "{product} is a simple addition to your home, offering {keywords} to help make everyday tasks more convenient."
+    ],
+    "Accessories": [
+        "Complete your everyday essentials with {product}. Featuring {keywords}, it combines convenience, practicality and a versatile design.",
+        "{product} is designed for everyday convenience. With {keywords}, it offers a practical solution that fits easily into your routine."
+    ],
+    "default": [
+        "Discover {product}, a practical product designed for everyday use. Featuring {keywords}, it combines convenience with reliable functionality."
+    ]
+}
